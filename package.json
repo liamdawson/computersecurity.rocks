@@ -1,0 +1,19 @@
+{
+  "name": "computersecurity.rocks",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://liamdawson/computersecurity.rocks.git",
+  "author": "Liam Dawson <liam@ldaws.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "tachyons": "^4.11.1"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.8",
+    "handlebars": "^4.0.12",
+    "postcss": "^7.0.7",
+    "postcss-import": "^12.0.1",
+    "postcss-preset-env": "^6.5.0"
+  }
+}
