@@ -4,12 +4,12 @@ const path = require('path');
 const glob = require('fast-glob');
 
 const Pug = require('pug');
-const Handlebars = require('handlebars');
 const PostCSS = require('postcss');
 const PostCSSPresetEnv = require('postcss-preset-env');
 const PostCSSImport = require('postcss-import');
 const CSSNano = require('cssnano');
 
+// TODO: env var
 const baseUrl = '';
 const langBasePath = (langCode) => langCode === 'en' ? '/' : `/${langCode}`;
 const baseUrlForLang = (langCode) => `${baseUrl}${langBasePath(langCode)}`;
