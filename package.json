@@ -9,7 +9,8 @@
   "scripts": {
     "build": "node build.js",
     "server": "live-server --no-browser dist/",
-    "dev": "nodemon -x run-p build server"
+    "watch:build": "nodemon -x run-s build",
+    "dev": "run-p watch:build server"
   },
   "dependencies": {
     "tachyons": "^4.11.1"

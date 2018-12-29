@@ -1,4 +1,87 @@
 extends _template.pug
 
+block title
+  | Computer Security Rocks!
+
 block content
-  p Hello, world!
+  div.mw8.center
+    div.pa4.lh-copy
+      h2.lh-subtitle.ttu.f1.fw6.
+        Keeping computers "secure" can feel overwhelming.
+      p.f3 Here are some tips you can use to make a big difference with a little effort!
+
+      h3.lh-subtitle.f2.ttu.mt5
+        a(href="./locking").black.
+          Lock your computer!
+      p.f3.measure.
+        When you're not in front of your computer, it's a great idea to "lock"
+        it. This ensures nobody can do anything without knowing your password.
+      p.f4.measure.
+        Most of the other advice you might get can be bypassed easily if an
+        attacker can access your computer while it's unlocked.
+      p.f4.measure.
+        You should do it even if you step away quickly. In the time it takes
+        you to get a drink of water, someone could plug a USB device into your
+        computer that runs commands, and you'd have no way to know about it.
+      p
+        a(href="./locking").c-heading-font.black.f4.fw6.ph2.ttu.
+          Read more
+        a(href="./unlocked").c-heading-font.black.f4.fw6.ph2.ttu.
+          Warn someone else
+
+      h3.lh-subtitle.f2.ttu.mt5
+        a(href="./passwords").black.
+          Use a password manager.
+      p.f3.measure.
+        Attackers are very good at retrying password from one website to
+        another, and many websites are bad at keeping your passwords secret. If
+        you use a password manager to create a unique password for every
+        website, you're safe!
+      p.f4.measure.
+        Password managers are protected with one very important password, and
+        can then store the passwords for all of your other websites and
+        accounts. Some managers easily let you store that password "vault" in
+        different places, like your phone, laptop, and online.
+      p.f4.measure.
+        It takes a bit of time and practice to get set up, but then it's nearly
+        impossible for online attackers to break into your accounts. They rely
+        on victims reusing passwords or making weak ones.
+      p.f4.measure.
+        Even reusing a password for "unimportant" sites is dangerous, as you
+        might have enough information across a few to let someone steal your
+        identity!
+      p
+        a(href="./passwords").c-heading-font.black.f4.fw6.ph2.ttu.
+          Read more
+
+      h3.lh-subtitle.f2.ttu.mt5
+        a(href="./2fa").black.
+          Set up "Two Factor Authentication".
+      p.f3.measure.
+        In case an attacker can steal your password, it's good practice to
+        ensure they'd need a second "factor" to log in: often something they'd 
+        have to physically steal.
+      p.f4.measure.
+        Many websites now offer the ability to turn on extra security by
+        requiring you to type in an extra code that expires after a short
+        period of time.
+      p.f4.measure.
+        An attacker can't reuse this code, even if they see you type it in, as
+        they will require a new one in a very short period of time. Generally,
+        this means they would need to physically steal your phone to get a new
+        code.
+      p.f4.measure.
+        If you can, enable an "authenticator" or smartphone option, as this
+        will let you generate codes without data or reception, and is harder to
+        intercept.
+      p
+        a(href="./2fa").c-heading-font.black.f4.fw6.ph2.ttu.
+          Read more
+
+      h2.lh-subtitle.ttu.f1.fw6.pt5.
+        Those three things make a huge difference!
+
+      p.f4.measure
+        | But if you'd prefer to improve your security game further, here are 
+        a(href="./further").black.c-heading-font.fw6.ttu.
+          some things to try.

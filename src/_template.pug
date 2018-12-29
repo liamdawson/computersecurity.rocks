@@ -7,5 +7,10 @@ html(lang=site.langCode)
     title
       block title
     link(rel="stylesheet", href=site.stylesheet)
-  body
+  body.c-body-font.near-black
+    div.c-bg-orange.black
+      div.mw8.center.pa4
+        h1.measure-narrow.lh-title.ttu.f1.f-headline-l.fw6.mt0
+          block title
+        .nav
     block content
