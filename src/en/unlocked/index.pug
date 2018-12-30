@@ -1,0 +1,39 @@
+extends ../_template.pug
+
+block title
+  | You left your computer unlocked!
+
+block content
+  div
+    div.bg-light-red
+      div.mw8-ns.center
+        div.ph4.pv4.pv5-ns
+          h2.f2.f1-ns.lh-heading.mw6-ns.ma0.pt3.pt6-ns Whoa there!
+          h3.f3.f2-ns.pt2 You left your computer unlocked.
+    
+    div.mw8-ns.center.ph4.lh-title
+      p.f3.f2-ns.pv4.measure
+        | According to professional hackers, getting unsupervised physical
+        | access to a computer is “game over”.
+
+      p.lh-copy.measure.f4.f3-ns.
+        Leaving an unlocked computer in the open only makes that easier. It
+        doesn't take long to compromise an open system.
+
+      section.pt4
+        h3.f3.f2-ns
+          // a(href=langUrlForPath("/locking.html")).black.no-underline
+          | Lock your computer!
+        div.lh-copy.measure
+          p.
+            When you’re not in front of your computer, it’s a great idea to “lock”
+            it. This ensures nobody can do anything without knowing your password.
+          p.
+            Most of the other advice you might get can be bypassed easily if an
+            attacker can access your computer while it’s unlocked.
+          p.
+            You should do it even if you step away quickly. In the time it takes
+            you to get a drink of water, someone could plug a USB device into your
+            computer that runs commands, and you’d have no way to know about it.
+          p.f4
+            // a(href=langUrlForPath("/locking.html")).black Read more

@@ -68,6 +68,10 @@ const buildHTMLFile = (destDir) => (source) => {
     }
   });
 
+  if (!fs.existsSync(path.dirname(destination))) {
+    fs.mkdirSync(path.dirname(destination), { recursive: true });
+  }
+
   fs.writeFileSync(destination, out, {encoding: 'utf8'});
 }
 
