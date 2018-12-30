@@ -4,7 +4,7 @@
   "main": "index.js",
   "repository": "https://liamdawson/computersecurity.rocks.git",
   "author": "Liam Dawson <liam@ldaws.com>",
-  "license": "MIT",
+  "license": "CC-BY-4.0",
   "private": false,
   "scripts": {
     "build": "node build.js",
