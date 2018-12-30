@@ -8,7 +8,7 @@
   "private": false,
   "scripts": {
     "build": "node build.js",
-    "server": "live-server --wait=1000 --no-browser dist/",
+    "server": "live-server --no-browser dist/",
     "watch:build": "nodemon -x run-s build",
     "dev": "run-p watch:build server"
   },
