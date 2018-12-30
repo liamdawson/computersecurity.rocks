@@ -8,9 +8,13 @@ html(lang=site.langCode)
       block title
     link(rel="stylesheet", href=site.stylesheet)
   body.c-body-font.near-black
-    div.c-bg-orange.black
-      div.mw8.center.pa4
-        h1.measure-narrow.lh-title.ttu.f1.f-headline-l.fw6.mt0
+    div.bg-near-black.near-white.f4
+      div.mw8-ns.center.flex.flex-column.justify-between.items-center.tc.flex-row-ns
+        h1.f2.f3-ns.ma0.pa3
           block title
-        .nav
+        div.flex.flex-row
+          block nav
     block content
+    footer(role="banner")#page-footer.bg-near-black.light-gray.ma0.mt5
+      div.mw8-ns.center.pa4
+        block footer

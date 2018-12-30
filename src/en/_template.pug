@@ -2,5 +2,19 @@ extends ../_template.pug
 
 block title
   | Computer Security Rocks!
+block nav
+  a(href="./").db.pa3.c-heading-font.light-gray.no-underline Screen Lock
+  a(href="./").db.pa3.c-heading-font.light-gray.no-underline Passwords
+  a(href="./").db.pa3.c-heading-font.light-gray.no-underline Two-Factor
 block content
   =yield
+block footer
+  div.tc
+    p
+      | Started by 
+      a(href="https://twitter.com/liamdaws") Liam Dawson
+      |.
+    p
+      | Licensed under a 
+      a(rel="license", href="http://creativecommons.org/licenses/by/4.0/") Creative Commons Attribution 4.0 International License
+      |.

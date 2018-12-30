@@ -11,10 +11,12 @@ const CSSNano = require('cssnano');
 
 // TODO: env var
 const baseUrl = '';
-const langBasePath = (langCode) => langCode === 'en' ? '/' : `/${langCode}`;
+const langBasePath = (langCode) => langCode === 'en' ? '' : `/${langCode}`;
 const baseUrlForLang = (langCode) => `${baseUrl}${langBasePath(langCode)}`;
 
 const isDevBuild = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
+
+const langUrlForPath = (langCode) => (path) => `${baseUrlForLang(langCode)}${path}`;
 
 function buildCSS(from, to) {
   const plugins = [
@@ -46,20 +48,23 @@ function buildHTML(sourceDir, destDir) {
 }
 
 const buildHTMLFile = (destDir) => (source) => {
-  const template = Pug.compileFile(source, { encoding: 'utf8', pretty: isDevBuild });
-  // const template = Handlebars.compile(fs.readFileSync(source, {encoding: 'utf8'}));
   // fast-glob always uses `/`, probably because that's in the input
   const pathParts = source.split('/');
   const langCode = pathParts[1];
   const destination = `${path.join.apply(undefined, [destDir, ...pathParts.slice(2)])}`
     .replace(/pug$/, 'html');
 
+  const template = Pug.compileFile(source, {
+    encoding: 'utf8',
+    pretty: isDevBuild
+  });
+
   const out = template({
+    langUrlForPath: langUrlForPath(langCode),
     site: {
       baseUrl: baseUrl,
       langUrl: baseUrlForLang(langCode),
       stylesheet: `${baseUrl}/style.css`,
-      langCode
     }
   });
 
